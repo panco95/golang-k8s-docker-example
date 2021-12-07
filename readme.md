@@ -1,16 +1,26 @@
-### Golang docker image example
+### Golang docker&k8s example
 
 
-Docker-Compose
+Docker-Compos:
 
 ```shell
 docker-compose up
 ```
 
-**OR**
-
-Docker
+Docker:
 
 ```shell
 docker run -it -p 8080:8080 -v /app/logs:/app/logs panco95/ginecho:v1
+```
+
+K8s Deployment(pods):
+
+```shell
+kubectl apply -f pod.yml
+```
+
+K8s Service:
+
+```shell
+kubectl apply -f service.yml
 ```

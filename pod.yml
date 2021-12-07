@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ginecho-pod
+  namespace: default
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: ginecho
+  template:
+    metadata:
+      labels:
+        app: ginecho
+    spec:
+      containers:
+        - image: panco95/ginecho:v2
+          name: ginecho
+          ports:
+            - containerPort: 8080
