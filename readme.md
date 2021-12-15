@@ -1,7 +1,7 @@
 ### Golang docker&k8s example
 
 
-Docker-Compos:
+Docker-Compose:
 
 ```shell
 docker-compose up
@@ -11,6 +11,12 @@ Docker:
 
 ```shell
 docker run -it -p 8080:8080 -v /app/logs:/app/logs panco95/ginecho:v1
+```
+
+Docker build:
+
+```
+docker build -t panco95/app:1.0.0 .
 ```
 
 K8s Deployment(pods):
