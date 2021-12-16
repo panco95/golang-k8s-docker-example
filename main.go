@@ -8,10 +8,10 @@ import (
 func main() {
 	r := gin.Default()
 
-	if err := createDir("/app/logs"); err != nil {
+	if err := createDir("logs"); err != nil {
 		panic(err)
 	}
-	file, err := os.Create("/app/logs/gin.log")
+	file, err := os.Create("logs/gin.log")
 	if err != nil {
 		panic(err)
 	}
